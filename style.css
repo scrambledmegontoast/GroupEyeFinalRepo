@@ -1,0 +1,12 @@
+
+  body{
+    margin: 0;
+    padding: 0;
+ 
+  }
+  canvas{
+    display: block;
+    position: absolute;
+    left: 505px;
+    top: 15px;
+  }
