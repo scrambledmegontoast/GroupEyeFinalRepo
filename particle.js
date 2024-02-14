@@ -70,7 +70,7 @@ class Particle {
     pgIris.stroke(gradientColor);
     
     // Set the stroke weight
-    pgIris.strokeWeight(0.2);
+    pgIris.strokeWeight(0.3);
     
     // Draw the line from the previous position to the current position
     pgIris.line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y);
@@ -84,7 +84,7 @@ class Particle {
     // You can choose to base the gradient on the particle's position or some other property
     // For simplicity, let's base it on the particle's x position
     let gradientPosition = map(this.pos.x,  0, width,  0,  1);
-    return lerpColor(color('#f292ed'), color('#f36364'), gradientPosition);
+    return lerpColor(color('#0c70fa'), color('#73d348'), gradientPosition);
   }
   // UpdatePrev method saves the current position as the previous position for the next frame
   updatePrev() {

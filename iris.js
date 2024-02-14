@@ -8,9 +8,7 @@ var backgroundColor = "#000000";
 var lastParticleTime = 0; // Time of the last particle generation
 var particleGenerationInterval = 4500; // Interval in milliseconds 
 const particleAmount = 900;
-
-// Define the attraction strength
-const ATTRACTION_STRENGTH = 3;
+const ATTRACTION_STRENGTH = 2;
 let pgIris;
 function setupIris() {
   pgIris = createGraphics(940, 1050);
@@ -20,10 +18,6 @@ function setupIris() {
 
   flowfield = new Array(cols * rows);
 
-  // Define the radius of the circle in the center
-  var circleRadius = 50;
-  var circleCenterX = width / 2;
-  var circleCenterY = height / 2;
 
   for (var i = 0; i < particleAmount; i++) {
     var posX, posY;
