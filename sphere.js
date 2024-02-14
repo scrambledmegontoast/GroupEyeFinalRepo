@@ -8,7 +8,7 @@ const CCSLIDER6 = 8;
 const CCSLIDER7 = 9;
 const CCSLIDER8 = 12;
 let myController;
-const cellSize = 2.5;
+const cellSize = 0.5;
 let displacement = 0;
 let dFactor = 50;
 let nFactor = 0.01;
@@ -49,9 +49,9 @@ function drawSphere() {
   pgSphere.rotateX(rotationXratio);
   pgSphere.rotateY(rotationYratio);
   //Number of points on the sphere
-  let numPoints = 100;
+  let numPoints = 50;
   //Radius
-  let radius = 350;
+  let radius = 50;
 
   //Loop points on the sphere
   for (let i = 0; i < numPoints; i++) {

@@ -6,7 +6,7 @@ function setupShare (){
 }
 
 function drawShare(){
-    background(0);
+    background(0,100);
     image(pg, 0, 0);
 
 
