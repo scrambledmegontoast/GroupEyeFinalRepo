@@ -7,6 +7,7 @@ const CCSLIDER5 = 6;
 const CCSLIDER6 = 8;
 const CCSLIDER7 = 9;
 const CCSLIDER8 = 12;
+const CCSLIDER9 = 86;
 let myController;
 const cellSize = 0.5;
 let displacement = 0;
@@ -111,7 +112,7 @@ function noteOn(e) {
 }
 // gets called when a MIDI control change message is intercepted
 function allCC(e) {
-  // console.log('moving slider', e.controller.number, e.data);
+//   console.log('moving slider', e.controller.number, e.data);
   let ratio = e.data[2] / 127;
   switch (e.controller.number) {
     case CCSLIDER1: {
@@ -142,11 +143,7 @@ function allCC(e) {
       break;
     }
     case CCSLIDER7: {
-      if (ratio <= 0.5) {
-        shape = 0;
-      } else {
-        shape = 1;
-      }
+      
       break;
     }
 
