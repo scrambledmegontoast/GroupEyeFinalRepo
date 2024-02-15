@@ -1,3 +1,4 @@
+
 class Particle {
   
   // Constructor initializes the particle with random position, velocity, and acceleration,
@@ -83,7 +84,7 @@ class Particle {
   calculateGradientColor() {
     // You can choose to base the gradient on the particle's position or some other property
     // For simplicity, let's base it on the particle's x position
-    let gradientPosition = map(this.pos.x,  0, width,  0,  1);
+    let gradientPosition = map(gradientposIris,  0, width,  0,  1);
     return lerpColor(color('#0c70fa'), color('#73d348'), gradientPosition);
   }
   // UpdatePrev method saves the current position as the previous position for the next frame

@@ -12,7 +12,6 @@ function setupSphere() {
   pgSphere = createGraphics(940, 1050, WEBGL);
   pgSphere.noStroke();
 }
-// gets called by MIDI library once MIDI enabled
 
 
 function drawSphere() {

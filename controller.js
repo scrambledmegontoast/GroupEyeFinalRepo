@@ -8,16 +8,20 @@ const CCSLIDER7 = 9;
 const CCSLIDER8 = 12;
 const CCSLIDER9 = 86;
 let myController;
+let R;
+let G;
+let B;
 let gradientposIris;
 
 function setupController(){
- 
+    console.log("setting up");
     WebMidi.enable()
     .then(onStart)
     .catch((err) => alert(err));   
 }
 
 function onStart() {
+    console.log("starting");
     // Display available MIDI input devices
     if (WebMidi.inputs.length < 1) {
       console.log("No device detected.");
@@ -31,9 +35,7 @@ function onStart() {
     myController.channels[1].addListener("controlchange", allCC);
   }
 
-  let R;
-let G;
-let B;
+
 
 // gets called when a MIDI note its intercepted
 function noteOn(e) {
@@ -91,7 +93,7 @@ function allCC(e) {
     case CCSLIDER8:
       break;
     case CCSLIDER9:
-        gradientposIris = ratio
+        gradientposIris= 1000*ratio;
       break;
   }
 }
